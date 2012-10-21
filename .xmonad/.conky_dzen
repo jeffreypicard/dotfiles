@@ -1,0 +1,14 @@
+background yes
+out_to_console yes
+out_to_x no
+# Update interval in seconds
+update_interval 1
+use_spacer none
+ 
+TEXT
+^fg(\#ffffff)CPU: ${cpu cpu1}% ${cpu cpu2}% \
+^fg(\#cccccc)MEM: ${mem} \
+^fg(\#ffffff)BAT: ${execi 1 ~/bin/bat_percent.sh } \
+^fg(\#cccccc)VOL: ${execi 1 amixer sget 'Master',0 | grep Mono: | sed 's/^[^[]*\[/[/g' | sed 's/\[[^%]*dB\] //g' | sed 's/^\[.*off\]/[-]/g' | sed 's/ \[on\]//g'}^fg() \
+^fg(\#ffffff)DATE: ${time %d %m %Y} \
+^fg(\#ebac54)TIME: ${time %R}

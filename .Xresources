@@ -1,0 +1,13 @@
+xterm*background: black
+xterm*foreground: white
+xterm*faceName: DejaVu Sans Mono:pixelsize=14
+
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=13
+!URxvt.font: xft:droid sans mono:pixelsize=13:antialias:true
+URxvt*background: black
+URxvt*foreground: white
+URxvt.scrollBar: false
+URxvt.urgentOnBell: true
+URxvt.depth: 32
+URxvt.background: [95]#000000
+urxvt*urlLauncher: /usr/bin/chromium
